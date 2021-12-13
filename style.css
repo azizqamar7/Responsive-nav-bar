@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(44, 44, 44);
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header {
+  padding: 0 140px;
+  display: flex;
+  justify-content: space-between;
+  height: 65px;
+  background-color: rgb(232, 232, 232);
+}
+
+#brand {
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+#brand a {
+  color: rgb(0, 57, 201);
+}
+
+ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+ul a {
+  color: #000;
+}
+
+ul li {
+  padding: 5px 30px;
+  margin-left: 10px;
+}
+
+ul li:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+#login,
+#signup {
+  padding: 5px 30px;
+  border-radius: 8px;
+  /* margin-left: 40px; */
+}
+
+/* #signup {
+  margin-left: 70px;
+} */
+
+#login {
+  border: 1px solid blue;
+}
+
+#signup {
+  border: 1px solid rgb(255, 132, 0);
+}
+
+#login a {
+  color: blue;
+}
+
+#signup a {
+  color: rgb(255, 132, 0);
+}
+
+/* -----styling hamburger-menu----- */
+
+#hamburger-menu {
+  display: none;
+  margin: auto 0;
+  cursor: pointer;
+}
+
+#hamburger-menu div {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+  opacity: 0;
+}
+
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  height: calc(100vh - 50px);
+  width: 100%;
+}
+
+/* -------Responsiveness------- */
+
+@media only screen and (max-width: 600px) {
+  header {
+    padding: 0 30px;
+    height: 45px;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  #hamburger-menu {
+    display: block;
+  }
+
+  ul a {
+    color: #fff;
+  }
+
+  ul li {
+    margin: 5px;
+  }
+}
